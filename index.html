@@ -82,7 +82,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;">
+                            <a href="javascript:;" class="logout">
                                 <i class="fa fa-sign-out"></i>
                                 退出
                             </a>
@@ -133,7 +133,7 @@
             </div>
         </div>
     </div>
-    
+    <!--     
     <script src="/public/assets/jquery/jquery.min.js"></script>
     <script src="/public/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="/public/assets/nprogress/nprogress.js"></script>
@@ -188,6 +188,11 @@
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
 
+    </script> -->
+    <script src="/public/js/require.js"></script>
+    <script src="/public/js/config.js"></script>
+    <script>
+        require(['src/index']);
     </script>
 </body>
 </html>
