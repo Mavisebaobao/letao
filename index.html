@@ -151,7 +151,16 @@
         //     }
         // })
 
-
+            $.ajax({
+                url:"/api/employee/checkRootLogin",
+                type:"get",
+                success:function(info){
+                    if(info.error){
+                        location.href="/login.html";
+                    }
+                    console.log(info);
+                }
+            })
 
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
