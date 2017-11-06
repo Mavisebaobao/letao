@@ -1,5 +1,5 @@
 define(["jquery"], function($) {
-    'use strict';
+    // 'use strict';
     //验证用户是不是已经登录
     $.ajax({
         url:"/api/employee/checkRootLogin",

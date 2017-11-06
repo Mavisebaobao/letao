@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>乐淘 - 后台管理</title>
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="./assets/nprogress/nprogress.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <?php include('./common/style.html') ?>
 </head>
 <body>
     
