@@ -44,7 +44,7 @@
                 <a href="?page=<%= i %>" ><%= i %></a></li>
             <% } %>
 
-            <% if(current<pageLen) {%>    
+            <% if(current<=pageLen) {%>    
             <li><a href="?page=<%=current-0+1%>">下一页</a></li>
             <% } %>
 

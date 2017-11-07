@@ -17,7 +17,7 @@ define(["jquery","template",'./Utils'], function($,template) {
         type:"get",
         data:{page:page,pageSize:size},
         success:function(info){
-            console.log(info);
+            // console.log(info);
             var total=info.total;//获得总的数量
             
             var pageLen=Math.ceil(total/size); //页面的数量

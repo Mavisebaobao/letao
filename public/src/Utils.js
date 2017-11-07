@@ -8,9 +8,10 @@ define(["jquery"], function($) {
             if(info.error){
                 location.href="/login.html";
             }
-            console.log(info);
+            // console.log(info);
         }
     })
+
     $(".logout").on("click",function(){
         $.ajax({
             url:"/api/employee/employeeLogout",

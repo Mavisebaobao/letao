@@ -23,6 +23,7 @@
                             <div class="col-xs-2 preview">
                                 <img src="/public/images/default.png">
                                 <input type="file" id="upfile">
+                                <input type="hidden" name="pic">
                                 <div class="cover">
                                     <i class="fa fa-upload"></i>                  
                                 </div>
@@ -37,10 +38,8 @@
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">所属品牌</label>
                             <div class="col-xs-5">
-                                <select name="brandId" class="form-control input-sm">
-                                    <option value="1">河北省</option>
-                                    <option value="2">山东省</option>
-                                    <option value="3">北京市</option>
+                                <select name="brandId" class="form-control input-sm brand">
+                                    <option >请选择：</option>                                   
                                 </select>
                             </div>
                         </div>
@@ -57,6 +56,30 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="" class="col-xs-3 control-label">产品大小</label>
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control input-sm" name="size">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="col-xs-3 control-label">是否上架</label>
+                            <div class="col-xs-5">
+                            <div class="radio-inline">
+                                    <label for="">
+                                        <input type="radio" name="statu" value="1"> 是
+                                    </label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label for="">
+                                        <input type="radio" name="statu" value="0"> 否
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
                             <label for="" class="col-xs-3 control-label">库存量</label>
                             <div class="col-xs-5">
                                 <input type="text" class="form-control input-sm" name="num">
@@ -65,7 +88,7 @@
                         <div class="form-group">
                             <label for="" class="col-xs-3 control-label">商品描述</label>
                             <div class="col-xs-5 ckeditor">
-                                <textarea name="" rows="5" class="form-control input-sm" name="proDesc"></textarea>
+                                <textarea  rows="5" class="form-control input-sm" name="proDesc"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -78,17 +101,15 @@
             </div>
         </div>
     </div>
-
+    <script type="text/template" id="tpl">
+        {{each rows}}
+        <option value="{{$value.id}}">{{$value.brandName}}</option>
+        {{/each}}
+    </script>
     <?php include("./common/script.html");?>
     <script>
         require (["src/goods-add"]);
     </script>
-     
-       
 
-    <!-- <script src="/public/assets/jquery/jquery.min.js"></script>
-    <script src="/public/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/public/assets/nprogress/nprogress.js"></script>
-    <script src="/public/js/common.js"></script> -->
 </body>
 </html>
